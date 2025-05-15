@@ -8,8 +8,16 @@ use MVC\Router;
 
 class UsuarioController extends ActiveRecord {
 
-public function index(Router $router) {
-    $router ->render('usuarios/index', []);
-}
+    public function index(Router $router) {
+        $router ->render('usuarios/index', []);
+    }
+
+    public static function guardarAPI() {
+
+        getHeadersApi();
+        
+        echo json_encode('Llegue hasta guardar');
+        return;
+    }
 
 }
